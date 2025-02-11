@@ -1,0 +1,12 @@
+pipeline {
+    agent {label 'weather-node'}
+    stages {
+        stage ('Cloning the code') {
+            steps {
+            echo 'Cloning the code from git hub'
+             git url: 'https://github.com/Sachin8801/Weather-app.git', branch: 'master'
+                
+            }
+        }
+    }
+}
